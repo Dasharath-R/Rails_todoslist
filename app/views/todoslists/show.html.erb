@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @todoslist.title %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @todoslist.description %></h6>
+    <%= link_to 'Edit', edit_todoslist_path(@todoslist) ,class:'btn  btn-sm btn-secondary' %> 
+<%= link_to 'Back', todoslists_path , class:'btn  btn-sm btn-secondary'%>
+  </div>
+</div>

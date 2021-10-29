@@ -1,0 +1,35 @@
+<%= form_with(model: todoslist) do |form| %>
+  <% if todoslist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todoslist.errors.count, "error") %> prohibited this todoslist from being saved:</h2>
+
+      <ul>
+        <% todoslist.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :title , class:"form-control",placeholder:'Todo' %>
+    <br>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :description,class:"form-control",placeholder:'Description'  %>
+    <br>
+  </div>
+
+  <div class="actions">
+    <%= form.submit  class:"btn btn-sm btn-secondary"%>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
